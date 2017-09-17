@@ -1,0 +1,5 @@
+%h1 New Ad
+= form_for @ad do |form|
+  = select_tag('category_id', options_for_select(@api.map { |item| [item["title"], item["id"]] }))
+  = form.text_field :image_link, :placeholder => "Ad image URL"
+  = form.submit
