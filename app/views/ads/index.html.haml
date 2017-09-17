@@ -1,0 +1,7 @@
+%h1 Ad
+= link_to("Create a new case", new_ad_path)
+%ul
+  - Ad.all.each do |c|
+    %li
+      Ad: #{image_tag(c.image_link)}
+
